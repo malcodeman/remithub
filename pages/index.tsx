@@ -192,29 +192,25 @@ const Home: NextPage = () => {
   function renderBody() {
     if (isEmpty(amount)) {
       return (
-        <Center>
-          <Box>
-            <Box mb="4" maxW="sm">
+        <Container maxW="container.sm">
+          <Center mb="4">
+            <Box maxW="sm" width="100%">
               <SearchIllustrations />
             </Box>
-            <Center>
-              <Button
-                colorScheme="blue"
-                isFullWidth
-                onClick={handleOnEnterAmount}
-              >
-                {t("enter-amount")}
-              </Button>
-            </Center>
-          </Box>
-        </Center>
+          </Center>
+          <Center>
+            <Button colorScheme="blue" onClick={handleOnEnterAmount}>
+              {t("enter-amount")}
+            </Button>
+          </Center>
+        </Container>
       );
     }
     if (parseFloat(amount) > 1000000) {
       return (
         <Container maxW="container.sm">
           <Center mb="4">
-            <Box maxW="sm">
+            <Box maxW="sm" width="100%">
               <NotFoundIllustrations />
             </Box>
           </Center>

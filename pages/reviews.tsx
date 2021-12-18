@@ -12,7 +12,7 @@ const Reviews = () => {
     <Layout>
       <Container maxW="container.sm">
         <Center mb="4">
-          <Box maxW="sm">
+          <Box maxW="sm" width="100%">
             <Contruction />
           </Box>
         </Center>
