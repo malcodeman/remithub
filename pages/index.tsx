@@ -119,6 +119,18 @@ const Home: NextPage = () => {
     {
       icon: (
         <Box maxWidth="8em">
+          <Wise />
+        </Box>
+      ),
+      provider: constants.PROVIDERS.WISE.NAME,
+      trustPilotScore: constants.PROVIDERS.WISE.TRUST_PILOT,
+      fee: constants.PROVIDERS.WISE.FEE,
+      recipientGets: calculateRecipientGets(constants.PROVIDERS.WISE.FEE),
+      url: constants.PROVIDERS.WISE.URL,
+    },
+    {
+      icon: (
+        <Box maxWidth="8em">
           <Remitly />
         </Box>
       ),
@@ -145,18 +157,6 @@ const Home: NextPage = () => {
     {
       icon: (
         <Box maxWidth="8em">
-          <PayPal />
-        </Box>
-      ),
-      provider: constants.PROVIDERS.PAYPAL.NAME,
-      trustPilotScore: constants.PROVIDERS.PAYPAL.TRUST_PILOT,
-      fee: constants.PROVIDERS.PAYPAL.FEE,
-      recipientGets: calculateRecipientGets(constants.PROVIDERS.PAYPAL.FEE),
-      url: constants.PROVIDERS.PAYPAL.URL,
-    },
-    {
-      icon: (
-        <Box maxWidth="8em">
           <WesternUnion />
         </Box>
       ),
@@ -171,14 +171,14 @@ const Home: NextPage = () => {
     {
       icon: (
         <Box maxWidth="8em">
-          <Wise />
+          <PayPal />
         </Box>
       ),
-      provider: "Wise",
-      trustPilotScore: constants.PROVIDERS.WISE.TRUST_PILOT,
-      fee: constants.PROVIDERS.WISE.FEE,
-      recipientGets: calculateRecipientGets(constants.PROVIDERS.WISE.FEE),
-      url: constants.PROVIDERS.WISE.URL,
+      provider: constants.PROVIDERS.PAYPAL.NAME,
+      trustPilotScore: constants.PROVIDERS.PAYPAL.TRUST_PILOT,
+      fee: constants.PROVIDERS.PAYPAL.FEE,
+      recipientGets: calculateRecipientGets(constants.PROVIDERS.PAYPAL.FEE),
+      url: constants.PROVIDERS.PAYPAL.URL,
     },
   ];
   const ref = React.useRef<HTMLInputElement>(null);
