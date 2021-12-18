@@ -3,9 +3,6 @@ import { Grid } from "@chakra-ui/layout";
 import { Select } from "@chakra-ui/select";
 import { map } from "ramda";
 import { InputGroup, InputRightAddon } from "@chakra-ui/input";
-import { Button } from "@chakra-ui/button";
-import { Search as IconSearch } from "react-feather";
-import { motion } from "framer-motion";
 import {
   NumberDecrementStepper,
   NumberIncrementStepper,
@@ -16,12 +13,18 @@ import {
 
 import constants from "../lib/constants";
 
-const Search = () => {
+type props = {
+  amount: string;
+  setAmount: (amount: string) => void;
+};
+
+const Search = (props: props) => {
+  const { amount, setAmount } = props;
   return (
     <Grid
       paddingY="8"
       gridGap="4"
-      gridTemplateColumns={["1fr", "1fr", "repeat(4, 1fr)"]}
+      gridTemplateColumns={["1fr", "1fr", "repeat(3, 1fr)"]}
     >
       <FormControl>
         <FormLabel>Country from</FormLabel>
@@ -48,7 +51,11 @@ const Search = () => {
       <FormControl>
         <FormLabel>Amount</FormLabel>
         <InputGroup size="sm">
-          <NumberInput>
+          <NumberInput
+            width="100%"
+            value={amount}
+            onChange={(value) => setAmount(value)}
+          >
             <NumberInputField borderLeftRadius="md" />
             <NumberInputStepper>
               <NumberIncrementStepper />
@@ -58,19 +65,6 @@ const Search = () => {
           <InputRightAddon borderEndRadius="md">EUR</InputRightAddon>
         </InputGroup>
       </FormControl>
-      <Button
-        as={motion.button}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        colorScheme="blue"
-        size="sm"
-        alignSelf="flex-end"
-        borderRadius="md"
-        isFullWidth
-        leftIcon={<IconSearch size={16} />}
-      >
-        Search
-      </Button>
     </Grid>
   );
 };

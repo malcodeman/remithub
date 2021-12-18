@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
           <meta property="og:image" content="opengraph.png"></meta>
         </Head>
         <body>
-          <ColorModeScript initialColorMode="dark" />
+          <ColorModeScript />
           <Main />
           <NextScript />
         </body>
