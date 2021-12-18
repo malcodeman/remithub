@@ -14,9 +14,9 @@ const About = () => {
       <Container maxW="container.sm">
         <Box>
           <Heading mb="4">{t("about-heading")}</Heading>
-          <Text mb="2">{t("about-subheading")}</Text>
+          <Text mb="8">{t("about-subheading")}</Text>
           <Heading mb="4">{t("about-save-money")}</Heading>
-          <Text mb="2">{t("about-save-money-desc")}</Text>
+          <Text mb="8">{t("about-save-money-desc")}</Text>
           <Heading mb="4">{t("team")}</Heading>
           <Grid gridTemplateColumns={["1fr", "1fr 1fr"]} gridGap="2">
             <Box>

@@ -27,6 +27,15 @@
   "compare-and-save": "Compare and Save",
   "footer-made-in-bih": "Made in Bosnia and Herzegovina",
   "affiliate-disclosure": "Affiliate Disclosure",
-  "affiliate-disclosure-desc": "remithub makes money through affiliate links to the various payment service providers featured on our website",
-  "enter-amount": "Enter amount"
+  "affiliate-disclosure-desc": "remithub makes money through affiliate links to the various payment service providers featured on our website.",
+  "enter-amount": "Enter amount",
+  "features-secure": "Secure",
+  "features-secure-desc": "We only recommend regulated and secure companies.",
+  "features-transparent": "Transparent",
+  "features-transparent-desc": "Affiliate commissions we may receive never impact our independence.",
+  "features-free": "Free",
+  "features-free-desc": "Anyone can compare and save for free.",
+  "features-fast": "Fast",
+  "features-fast-desc": "Blazing fast responses.",
+  "we-are-sorry-this-page-is-work-in-progress": "We’re sorry – this page is work in progress."
 }

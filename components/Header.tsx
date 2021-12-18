@@ -52,7 +52,7 @@ function Header(props: LayoutProps) {
       <Container maxW="container.lg">
         <Flex as="nav" justifyContent="space-between">
           <Flex alignItems="center">
-            <Box mr="4">
+            <Box mr="4" display={["none", "initial"]}>
               <Logo href="/" />
             </Box>
             <NavLink href="/">
@@ -67,6 +67,7 @@ function Header(props: LayoutProps) {
           </Flex>
           <Flex>
             <IconButton
+              display={["none", "inline-flex"]}
               size="sm"
               aria-label="Color mode"
               mr="2"
