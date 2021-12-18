@@ -37,7 +37,7 @@ import Table from "../components/misc/Table";
 import Search from "../components/Search";
 import Layout from "../components/Layout";
 import Faq from "../components/Faq";
-import Features from "../components/features";
+import Features from "../components/Features";
 import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
