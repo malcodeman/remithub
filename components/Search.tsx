@@ -10,6 +10,7 @@ import {
   NumberInputField,
   NumberInputStepper,
 } from "@chakra-ui/number-input";
+import { useTranslation } from "next-i18next";
 
 import constants from "../lib/constants";
 
@@ -20,6 +21,7 @@ type props = {
 
 const Search = (props: props) => {
   const { amount, setAmount } = props;
+  const { t } = useTranslation("common");
   return (
     <Grid
       paddingY="8"
@@ -27,29 +29,33 @@ const Search = (props: props) => {
       gridTemplateColumns={["1fr", "1fr", "repeat(3, 1fr)"]}
     >
       <FormControl>
-        <FormLabel>Country from</FormLabel>
+        <FormLabel>{t("country-from")}</FormLabel>
         <Select size="sm" borderRadius="md">
           {map(
             (item) => (
-              <option value={item.value}>{item.label}</option>
+              <option key={item.value} value={item.value}>
+                {item.label}
+              </option>
             ),
             constants.COUNTRIES.FROM
           )}
         </Select>
       </FormControl>
       <FormControl>
-        <FormLabel>Country to</FormLabel>
+        <FormLabel>{t("country-to")}</FormLabel>
         <Select size="sm" borderRadius="md">
           {map(
             (item) => (
-              <option value={item.value}>{item.label}</option>
+              <option key={item.value} value={item.value}>
+                {item.label}
+              </option>
             ),
             constants.COUNTRIES.TO
           )}
         </Select>
       </FormControl>
       <FormControl>
-        <FormLabel>Amount</FormLabel>
+        <FormLabel>{t("amount")}</FormLabel>
         <InputGroup size="sm">
           <NumberInput
             width="100%"

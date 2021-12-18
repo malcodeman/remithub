@@ -15,6 +15,9 @@ import { Cell } from "react-table";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { isEmpty } from "ramda";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+
 import type { NextPage } from "next";
 
 import constants from "../lib/constants";
@@ -29,16 +32,18 @@ import NotFound from "../illustrations/NotFound";
 
 import Table from "../components/misc/Table";
 import Search from "../components/Search";
+import Layout from "../components/Layout";
 
 const Home: NextPage = () => {
+  const { t } = useTranslation("common");
   const columns = React.useMemo(
     () => [
       {
-        Header: "Provider",
+        Header: t("provider"),
         accessor: "icon",
       },
       {
-        Header: "Transfer fee",
+        Header: t("transfer-fee"),
         accessor: "fee",
         Cell: function scoreCell(props: Cell) {
           return (
@@ -54,7 +59,7 @@ const Home: NextPage = () => {
         },
       },
       {
-        Header: "Recipient gets",
+        Header: t("recipient-gets"),
         accessor: "recipientGets",
         Cell: function recipientGetsCell(props: {
           value: number;
@@ -73,7 +78,7 @@ const Home: NextPage = () => {
                   size="sm"
                   leftIcon={<IconLink size={16} />}
                 >
-                  Send money
+                  {t("send-money")}
                 </Button>
               </Link>
             </Flex>
@@ -81,12 +86,13 @@ const Home: NextPage = () => {
         },
       },
     ],
-    []
+    [t]
   );
   const exchangeRatesQuery = useQuery("rates", () => axios.get("/api/latest"), {
     enabled: constants.IS_PROD,
   });
   const [amount, setAmount] = React.useState("");
+
   const exchangeRate =
     exchangeRatesQuery.data?.data.rates.BAM || constants.DEFAULT_EXCHANGE_RATE;
 
@@ -183,17 +189,16 @@ const Home: NextPage = () => {
             </Box>
           </Center>
           <Text mb="2" textAlign="center">
-            We’re sorry – we don’t have comparisons for large amounts.
+            {t("we-are-sorry-we-dont-have-comparisons-for-large-amount")}
           </Text>
           <Text mb="2" textAlign="center">
-            In order to collect reliable prices from other providers, we
-            sometimes use their service for bank-to-bank transfers - just as if
-            we were customers. The largest amount we’ve collected reliable
-            prices for is {constants.MAX_AMOUNT} EUR.
+            {t("we-are-sorry-we-dont-have-comparisons-for-large-amount-desc", {
+              amount: constants.MAX_AMOUNT,
+            })}
           </Text>
           <Center>
             <Button onClick={() => setAmount(String(constants.MAX_AMOUNT))}>
-              Compare sending {constants.MAX_AMOUNT} EUR
+              {t("compare-sending", { amount: constants.MAX_AMOUNT })}
             </Button>
           </Center>
         </Container>
@@ -203,15 +208,19 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div>
-      <Container maxW="container.lg">
-        <Box mb="8">
-          <Search amount={amount} setAmount={setAmount} />
-        </Box>
-        {renderBody()}
-      </Container>
-    </div>
+    <Layout>
+      <Box mb="8">
+        <Search amount={amount} setAmount={setAmount} />
+      </Box>
+      {renderBody()}
+    </Layout>
   );
 };
 
 export default Home;
+
+export const getStaticProps = async ({ locale }: { locale: string }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});

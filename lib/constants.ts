@@ -61,6 +61,20 @@ const PROVIDERS = {
   },
 };
 const MAX_AMOUNT = 1000000;
+const LANGUAGES = [
+  {
+    label: "Bosanski",
+    value: "ba",
+  },
+  {
+    label: "Deutsch",
+    value: "de",
+  },
+  {
+    label: "English",
+    value: "en",
+  },
+];
 
 const EXPORTS = {
   DOCUMENT,
@@ -71,6 +85,7 @@ const EXPORTS = {
   DEFAULT_EXCHANGE_RATE,
   PROVIDERS,
   MAX_AMOUNT,
+  LANGUAGES,
 };
 
 export default EXPORTS;

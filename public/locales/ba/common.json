@@ -1,0 +1,15 @@
+{
+  "provider": "Provajder",
+  "transfer-fee": "Naknada za transfer",
+  "recipient-gets": "Primalac dobija",
+  "country-from": "Zemlja iz",
+  "country-to": "Zemlja do",
+  "amount": "Iznos",
+  "send-money": "Pošalji novac",
+  "we-are-sorry-we-dont-have-comparisons-for-large-amount": "Žao nam je - nemamo poređenja za velike količine",
+  "we-are-sorry-we-dont-have-comparisons-for-large-amount-desc": "Kako bismo prikupili pouzdane cijene od drugih provajdera, ponekad koristimo njihovu uslugu za transfere od banke do banke - baš kao da smo klijenti. Najveći iznos za koji smo prikupili pouzdane cijene je {{amount}} EUR.",
+  "compare-sending": "Uporedi slanje {{amount}} EUR",
+  "home": "Početna",
+  "reviews": "Recenzije",
+  "about": "O stranici"
+}

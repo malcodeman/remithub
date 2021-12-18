@@ -1,0 +1,15 @@
+{
+  "provider": "Anbieter",
+  "transfer-fee": "Ablöse",
+  "recipient-gets": "Empfänger bekommt",
+  "country-from": "Land aus",
+  "country-to": "Land nach",
+  "amount": "Höhe",
+  "send-money": "Geld schicken",
+  "we-are-sorry-we-dont-have-comparisons-for-large-amount": "Es tut uns leid – wir haben keine Vergleiche für große Beträge",
+  "we-are-sorry-we-dont-have-comparisons-for-large-amount-desc": "Um bei anderen Anbietern verlässliche Preise einzuholen, nutzen wir deren Service manchmal für Bank-zu-Bank-Überweisungen – als wären wir Kunden. Der größte Betrag, für den wir zuverlässige Preise gesammelt haben, beträgt {{amount}} EUR.",
+  "compare-sending": "Vergleichen Sie den Versand von {{amount}} EUR",
+  "home": "Heim",
+  "reviews": "Bewertungen",
+  "about": "Etwa"
+}

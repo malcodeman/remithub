@@ -1,0 +1,15 @@
+{
+  "provider": "Provider",
+  "transfer-fee": "Transfer fee",
+  "recipient-gets": "Recipient gets",
+  "country-from": "Country from",
+  "country-to": "Country to",
+  "amount": "Amount",
+  "send-money": "Send money",
+  "we-are-sorry-we-dont-have-comparisons-for-large-amount": "We’re sorry – we don’t have comparisons for large amounts",
+  "we-are-sorry-we-dont-have-comparisons-for-large-amount-desc": "In order to collect reliable prices from other providers, we sometimes use their service for bank-to-bank transfers - just as if we were customers. The largest amount we’ve collected reliable prices for is {{amount}} EUR.",
+  "compare-sending": "Compare sending {{amount}} EUR",
+  "home": "Home",
+  "reviews": "Reviews",
+  "about": "About"
+}

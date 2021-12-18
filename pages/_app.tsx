@@ -1,5 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { QueryClientProvider, QueryClient } from "react-query";
+import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 
 const queryClient = new QueryClient({
@@ -23,4 +24,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
