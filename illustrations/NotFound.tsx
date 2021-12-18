@@ -1,8 +1,13 @@
-const NotFound = () => {
+type props = {
+  stroke?: string;
+};
+
+const NotFound = (props: props) => {
+  const { stroke = "currentColor" } = props;
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1508.85 892.54">
       <defs>
-        <style>{`.cls-1,.cls-3{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:6px;}.cls-1{stroke:#2e186a;}.cls-2{fill:#fe7624;}.cls-3{stroke:#fe7624;}.cls-4{fill:#2e186a;}`}</style>
+        <style>{`.cls-1,.cls-3{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:6px;}.cls-1{stroke:${stroke};}.cls-2{fill:#fe7624;}.cls-3{stroke:#fe7624;}.cls-4{fill:${stroke};}`}</style>
       </defs>
       <g id="Layer_2" data-name="Layer 2">
         <g id="outline_II" data-name="outline II">

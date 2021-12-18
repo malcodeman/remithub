@@ -16,11 +16,12 @@ import constants from "../lib/constants";
 
 type props = {
   amount: string;
+  amountInputRef: any;
   setAmount: (amount: string) => void;
 };
 
 const Search = (props: props) => {
-  const { amount, setAmount } = props;
+  const { amount, amountInputRef, setAmount } = props;
   const { t } = useTranslation("common");
   return (
     <Grid
@@ -62,7 +63,7 @@ const Search = (props: props) => {
             value={amount}
             onChange={(value) => setAmount(value)}
           >
-            <NumberInputField borderLeftRadius="md" />
+            <NumberInputField borderLeftRadius="md" ref={amountInputRef} />
             <NumberInputStepper>
               <NumberIncrementStepper />
               <NumberDecrementStepper />

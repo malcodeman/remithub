@@ -75,6 +75,11 @@ const LANGUAGES = [
     value: "en",
   },
 ];
+const TEAM = {
+  AMER: "Amer Karamustafić",
+  MERSIHA: "Mersiha Ćeranić",
+  MERIMA: "Merima Ćeranić",
+};
 
 const EXPORTS = {
   DOCUMENT,
@@ -86,6 +91,7 @@ const EXPORTS = {
   PROVIDERS,
   MAX_AMOUNT,
   LANGUAGES,
+  TEAM,
 };
 
 export default EXPORTS;

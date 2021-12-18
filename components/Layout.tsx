@@ -11,7 +11,7 @@ const Layout = (props: props) => {
   return (
     <>
       <Header />
-      <Box as="main" paddingTop="calc(2rem + 48px)">
+      <Box as="main" paddingTop="calc(2rem + 48px)" paddingBottom="8">
         <Container maxW="container.lg">{children}</Container>
       </Box>
     </>

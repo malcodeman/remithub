@@ -11,5 +11,22 @@
   "compare-sending": "Vergleichen Sie den Versand von {{amount}} EUR",
   "home": "Heim",
   "reviews": "Bewertungen",
-  "about": "Etwa"
+  "software-engineer": "Softwareentwickler",
+  "data-science": "Datenwissenschaft",
+  "about": "Etwa",
+  "about-heading": "Die Mission von remithub ist es, Ihnen beim Sparen von Überweisungsgebühren und Wechselkursen zu helfen",
+  "about-subheading": "Wir bauen airbnb.com für Geldüberweisungen auf. Wir helfen Menschen, die Geld ins Ausland senden, Geldtransferanbieter in Echtzeit zu finden, zu vergleichen und zu überprüfen.",
+  "team": "Team",
+  "about-save-money": "Wie Sie mit remithub Geld sparen können",
+  "about-save-money-desc": "Wenn Sie einen Vergleich starten, holen wir die Gebühren und Wechselkurse aller verfügbaren Anbieter ab, um Ihnen zu helfen, die beste Option für Ihre Überweisung zu finden. Sie sparen bis zu 90% gegenüber Ihrem Bank oder die teuersten Anbieter.",
+  "frequently-asked-questions": "Häufig gestellte Fragen",
+  "faq-is-it-possible-to-send-money-with-remithub": "Ist es möglich, Geld mit remithub zu senden",
+  "faq-remithub-is-not-a-money-transfer-company": "Nein, remithub ist kein Geldtransfer-Unternehmen. Wir helfen Ihnen dabei, den besten Weg zu finden, Geld ins Ausland zu überweisen.",
+  "faq-can-i-trust-a-company-i-found-on-remithub": "Kann ich einem Unternehmen vertrauen, das ich auf remithub gefunden habe",
+  "faq-we-only-list-money-transfer-companies-that-are-fully-authorized": "Ja, wir listen nur Geldüberweisungsunternehmen oder Banken auf, die von den Aufsichtsbehörden ihrer Betriebsländer vollständig autorisiert und überwacht sind.",
+  "compare-and-save": "Vergleichen und Speichern",
+  "footer-made-in-bih": "Made in Bosnien und Herzegowina",
+  "affiliate-disclosure": "Affiliate-Offenlegung",
+  "affiliate-disclosure-desc": "remithub verdient Geld durch Affiliate-Links zu den verschiedenen Zahlungsdienstleistern, die auf unserer Website vorgestellt werden",
+  "enter-amount": "Betrag eingeben"
 }

@@ -6,10 +6,13 @@ import {
   LayoutProps,
   Select,
   useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import { map } from "ramda";
+import { Moon, Sun } from "react-feather";
+import { IconButton } from "@chakra-ui/button";
 
 import constants from "../lib/constants";
 
@@ -24,6 +27,7 @@ function Header(props: LayoutProps) {
   );
   const { t } = useTranslation("common");
   const router = useRouter();
+  const { colorMode, toggleColorMode } = useColorMode();
   const { locale } = router;
 
   function onChangeLocale(e: React.ChangeEvent<HTMLSelectElement>) {
@@ -61,7 +65,14 @@ function Header(props: LayoutProps) {
               <Text mr="4">{t("about")}</Text>
             </NavLink>
           </Flex>
-          <Box>
+          <Flex>
+            <IconButton
+              size="sm"
+              aria-label="Color mode"
+              mr="2"
+              icon={colorMode === "dark" ? <Sun /> : <Moon />}
+              onClick={toggleColorMode}
+            />
             <Select
               size="sm"
               borderRadius="md"
@@ -77,7 +88,7 @@ function Header(props: LayoutProps) {
                 constants.LANGUAGES
               )}
             </Select>
-          </Box>
+          </Flex>
         </Flex>
       </Container>
     </Box>

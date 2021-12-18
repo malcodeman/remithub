@@ -11,5 +11,22 @@
   "compare-sending": "Compare sending {{amount}} EUR",
   "home": "Home",
   "reviews": "Reviews",
-  "about": "About"
+  "software-engineer": "Software Engineer",
+  "data-science": "Data Science",
+  "about": "About",
+  "about-heading": "remithub's mission is to help you save on transfer fees and exchange rates",
+  "about-subheading": "We're building the airbnb.com for money transfers. We help people sending money abroad find, compare and review money transfer providers in real-time.",
+  "team": "Team",
+  "about-save-money": "How remithub can save you money",
+  "about-save-money-desc": "When you launch a comparison, we fetch the fees and exchange rates of all available providers to help you find the best option for your transfer. You can save up to 90% in comparison with your bank or the most expensive providers.",
+  "frequently-asked-questions": "Frequently asked questions",
+  "faq-is-it-possible-to-send-money-with-remithub": "Is it possible to send money with remithub",
+  "faq-remithub-is-not-a-money-transfer-company": "No, remithub is not a money transfer company. We’re here to help you find the best way to send money abroad.",
+  "faq-can-i-trust-a-company-i-found-on-remithub": "Can I trust a company I found on remithub",
+  "faq-we-only-list-money-transfer-companies-that-are-fully-authorized": "Yes, we only list money transfer operators or banks that are fully authorized and monitored by the regulatory authorities of their operating countries.",
+  "compare-and-save": "Compare and Save",
+  "footer-made-in-bih": "Made in Bosnia and Herzegovina",
+  "affiliate-disclosure": "Affiliate Disclosure",
+  "affiliate-disclosure-desc": "remithub makes money through affiliate links to the various payment service providers featured on our website",
+  "enter-amount": "Enter amount"
 }

@@ -7,6 +7,8 @@ import {
   Flex,
   Badge,
   Center,
+  Heading,
+  Divider,
 } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import { Link as IconLink } from "react-feather";
@@ -28,11 +30,15 @@ import Remitly from "../icons/Remitly";
 import WesternUnion from "../icons/WesternUnion";
 import SmallWorld from "../icons/SmallWorld";
 import Wise from "../icons/Wise";
-import NotFound from "../illustrations/NotFound";
+import NotFoundIllustrations from "../illustrations/NotFound";
+import SearchIllustrations from "../illustrations/Search";
 
 import Table from "../components/misc/Table";
 import Search from "../components/Search";
 import Layout from "../components/Layout";
+import Faq from "../components/Faq";
+import Features from "../components/features";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   const { t } = useTranslation("common");
@@ -175,17 +181,41 @@ const Home: NextPage = () => {
       url: constants.PROVIDERS.WISE.URL,
     },
   ];
+  const ref = React.useRef<HTMLInputElement>(null);
+
+  function handleOnEnterAmount() {
+    if (ref.current) {
+      ref.current.focus();
+    }
+  }
 
   function renderBody() {
     if (isEmpty(amount)) {
-      return null;
+      return (
+        <Center>
+          <Box>
+            <Box mb="4" maxW="sm">
+              <SearchIllustrations />
+            </Box>
+            <Center>
+              <Button
+                colorScheme="blue"
+                isFullWidth
+                onClick={handleOnEnterAmount}
+              >
+                {t("enter-amount")}
+              </Button>
+            </Center>
+          </Box>
+        </Center>
+      );
     }
     if (parseFloat(amount) > 1000000) {
       return (
         <Container maxW="container.sm">
           <Center mb="4">
             <Box maxW="sm">
-              <NotFound />
+              <NotFoundIllustrations />
             </Box>
           </Center>
           <Text mb="2" textAlign="center">
@@ -209,10 +239,17 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
-      <Box mb="8">
-        <Search amount={amount} setAmount={setAmount} />
+      <Box minHeight="calc(100vh - 80px)">
+        <Center>
+          <Heading mb="4">{t("compare-and-save")}</Heading>
+        </Center>
+        <Search amount={amount} amountInputRef={ref} setAmount={setAmount} />
+        {renderBody()}
       </Box>
-      {renderBody()}
+      <Features />
+      <Divider marginY="16" />
+      <Faq />
+      <Footer />
     </Layout>
   );
 };
