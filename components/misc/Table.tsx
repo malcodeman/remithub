@@ -1,5 +1,5 @@
 import React from "react";
-import { useTable } from "react-table";
+import { useTable, useSortBy } from "react-table";
 import {
   Table as ChakraTable,
   Thead,
@@ -7,8 +7,10 @@ import {
   Th,
   Tbody,
   Td,
+  Flex,
 } from "@chakra-ui/react";
 import { map } from "ramda";
+import { ChevronDown, ChevronUp } from "react-feather";
 
 type props = {
   size?: "sm" | "md" | "lg";
@@ -19,10 +21,14 @@ type props = {
 const Table = (props: props) => {
   const { size = "sm", columns, data } = props;
   const { getTableProps, getTableBodyProps, prepareRow, headerGroups, rows } =
-    useTable({
-      columns,
-      data,
-    });
+    useTable(
+      {
+        columns,
+        data,
+      },
+      useSortBy
+    );
+
   return (
     <ChakraTable size={size} {...getTableProps()}>
       <Thead>
@@ -34,11 +40,21 @@ const Table = (props: props) => {
             >
               {map(
                 (column) => (
-                  <Th
-                    {...column.getHeaderProps()}
-                    key={column.getHeaderProps().key}
-                  >
-                    {column.render("Header")}
+                  <Th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                    <Flex alignItems="center">
+                      {column.render("Header")}
+                      <span>
+                        {column.isSorted ? (
+                          column.isSortedDesc ? (
+                            <ChevronDown size={16} />
+                          ) : (
+                            <ChevronUp size={16} />
+                          )
+                        ) : (
+                          ""
+                        )}
+                      </span>
+                    </Flex>
                   </Th>
                 ),
                 group.headers
