@@ -7,7 +7,7 @@
 
 </div>
 <br />
-<div align="center"><strong>remithub</strong></div>
+<div align="center"><h2>remithub</h2></div>
 <div align="center">Save on money transfer fees, obtain the best exchange rates by finding the best money transfer provider.</div>
 <br />
 <div align="center">
